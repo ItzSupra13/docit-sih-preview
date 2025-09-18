@@ -44,11 +44,44 @@ export default function Home() {
               size="lg"
               onClick={() => window.location.href = "https://doc-it-a20d27ad.base44.app"}
               className="text-lg px-8 py-6"
-            >
+            > 
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
-        </div>
+        </div> 
+        <Card className="max-w-3xl mx-auto mt-16 mb-10 glass-effect">
+  <CardHeader className="text-center">
+    <CardTitle className="text-2xl">Live Validation Dashboard</CardTitle>
+    <CardDescription>
+      Organization type distribution from DocIt early users
+    </CardDescription>
+  </CardHeader>
+  <CardContent className="flex flex-col items-center gap-6">
+    {/* Embedded Chart */}
+    <div className="w-full flex justify-center">
+      <div className="w-full max-w-2xl h-[400px] rounded-xl overflow-hidden border border-border shadow-md bg-background/40">
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRL7JV0nUD5L8D0GhwwSmPGPfW12X5bypiuDXl-ccGzYMruNz_89JTdJYlSmmE9s77Bdla8wkECMQIa/pubchart?oid=1557562544&amp;format=interactive"
+          width="100%"
+          height="100%"
+          className="rounded-xl"
+          style={{ border: "none" }}
+        ></iframe>
+      </div>
+    </div>
+
+    {/* Link to Google Form */}
+    <Button
+      size="lg"
+      onClick={() =>
+        window.open("https://forms.gle/3DGjBDWdueAvNQdMA", "_blank")
+      }
+      className="text-lg px-8 py-6"
+    >
+      Fill the Validation Form
+    </Button>
+  </CardContent>
+</Card>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <Card className="glass-effect">
